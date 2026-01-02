@@ -948,7 +948,7 @@ NAMES = [
 
 TLDS = ["com", "net", "org", "co", "me", "info", "us", "de", "jp", "in", "com"]
 
-if __name__ == "__main__":
+def main():
     options = get_options()
 
     if options.ifnot and check_my_ip() == options.ifnot:
@@ -963,3 +963,7 @@ if __name__ == "__main__":
             exit(1)
     else:
         start_smoke(NAMES, TLDS, options.freq)
+
+
+if __name__ == "__main__":
+    main()
